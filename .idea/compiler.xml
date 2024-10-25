@@ -8,11 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="naming-server (5) (br.com.erudio)" />
-        <module name="foo" />
         <module name="book-service (6) (br.com.erudio)" />
+        <module name="foo" />
         <module name="book-service (1) (br.com.erudio)" />
         <module name="naming-server (1) (br.com.erudio)" />
         <module name="rest-with-springboot-udemy (1)" />
+        <module name="1-SpringGreetings" />
         <module name="api-gateway (2) (br.com.erudio)" />
         <module name="cambio-service (2) (br.com.erudio)" />
         <module name="erudio-config-server" />
@@ -40,7 +41,7 @@
         <module name="greeting-service (1) (com.iara)" />
         <module name="greeting-service" />
         <module name="book-service (5) (br.com.erudio)" />
-        <module name="foo (1) (br.com.erudio)" />
+        <module name="com.iara" />
         <module name="foo (1)" />
         <module name="api-gateway" />
         <module name="naming-server (2) (br.com.erudio)" />
@@ -50,9 +51,13 @@
         <module name="cambio-service (3) (br.com.erudio)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.iara.foo" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="1-SpringGreetings" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="api-gateway (1) (br.com.erudio)" options="-parameters" />
       <module name="api-gateway (2) (br.com.erudio)" options="-parameters" />
@@ -74,12 +79,13 @@
       <module name="cambio-service (5) (br.com.erudio)" options="-parameters" />
       <module name="cambio-service (6) (br.com.erudio)" options="-parameters" />
       <module name="chatgpt-spring-boot-java-integration" options="-parameters" />
+      <module name="com.iara" options="-parameters" />
+      <module name="com.iara.foo" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="erudio-config-server" options="-parameters" />
       <module name="erudio-config-server (1)" options="-parameters" />
       <module name="foo" options="-parameters" />
       <module name="foo (1)" options="-parameters" />
-      <module name="foo (1) (br.com.erudio)" options="-parameters" />
       <module name="foo (2) (br.com.erudio)" options="-parameters" />
       <module name="foo (3) (br.com.erudio)" options="-parameters" />
       <module name="greeting-service" options="-parameters" />

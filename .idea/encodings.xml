@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/1-SpringGreeting/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/2-SpringCalculator/foo/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/3-SpringPerson/foo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1-SpringGreetings/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2-SpringCalculator/com.iara.foo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3-SpringPerson/com.iara/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/4-GreetingMicroservice/config-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/4-GreetingMicroservice/greeting-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/5-Microservicos/api-gateway/src/main/java" charset="UTF-8" />
