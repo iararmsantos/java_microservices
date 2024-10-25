@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/1-SpringGreeting/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2-SpringCalculator/foo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3-SpringPerson/foo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/4-GreetingMicroservice/config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/4-GreetingMicroservice/greeting-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5-Microservicos/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5-Microservicos/book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5-Microservicos/cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/5-Microservicos/naming-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/00-foo-bar-spring-initializr/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/01-foo-bar-final/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/02-calculator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/03-four-main-verbs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/04-erudio-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/04-greeting-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/05-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/05-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/06-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/06-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/06-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/06-naming-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/07-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/07-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/07-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/07-naming-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/08-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/08-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/08-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/08-naming-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/09-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/09-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/09-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/09-naming-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/18_BONUS_ChatGPT/chatgpt-spring-boot-java-integration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Challenges/01_MathChallenge/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/DockerReview/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Dockerizing/10-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Dockerizing/10-book-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Dockerizing/10-cambio-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Dockerizing/10-erudio-config-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LeandroGitRepository/erudio-microservices/Dockerizing/10-naming-server/src/main/java" charset="UTF-8" />
+  </component>
+</project>
