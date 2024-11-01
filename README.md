@@ -16,3 +16,17 @@ The course also covered the evolution of Spring Cloud, which has adopted technol
 By the end of the course, I am prepared to build robust, scalable, and well-documented microservices with a modern and secure stack. With extra minicourses on Docker, Docker Compose, and integration with the ChatGPT API, I feel more equipped than ever to tackle real-world challenges in modern, microservices-driven corporate environments.
 
 Udemy Url: https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot-kubernetes-e-docker
+
+### To run:
+1. Clone this project
+2. Open it in any java IDE
+3. Create maven project with the POM
+4. Run the Project
+
+### 4 - GreetingMicroservice
+This project is configured to use spring cloud server with github. The project with the configuration is [config-server-sample](https://github.com/iararmsantos/config-server-sample)
+- To update configuration without close this project
+- clone [config-server-sample](https://github.com/iararmsantos/config-server-sample)
+- make the changes you need and commit it
+- run in Postman: [GREETING_URL:PORT]/actuator/refresh
+- run [GREETING_URL:PORT]/greeting to verify the changes
