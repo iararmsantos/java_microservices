@@ -24,9 +24,16 @@ Udemy Url: https://www.udemy.com/course/microservices-do-0-a-gcp-com-spring-boot
 4. Run the Project
 
 ### 4 - GreetingMicroservice
-This project is configured to use spring cloud server with github. The project with the configuration is [config-server-sample](https://github.com/iararmsantos/config-server-sample)
+This project is configured to use spring cloud server with github. The project with the configuration is [config-server-sample](https://github.com/iararmsantos/config-server-sample).
+Follow the instructions in that repository to run using cloud config server.
 - To update configuration without close this project
 - clone [config-server-sample](https://github.com/iararmsantos/config-server-sample)
 - make the changes you need and commit it
 - run in Postman: [GREETING_URL:PORT]/actuator/refresh
 - run [GREETING_URL:PORT]/greeting to verify the changes
+
+### 5 - Microservices
+- microservices using Feign to communicate between services
+
+* To run multiple applications:
+- on Intellij: add vm options in the edit run configuration and add -Dserver.port=8002

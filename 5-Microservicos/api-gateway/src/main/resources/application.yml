@@ -1,12 +1,15 @@
 server:
   port: 8765
 eureka:
+  instance:
+    hostname: localhost
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
 spring:
   application:
     name: api-gateway
+# routes configured in ApiGatewayConfig
 #  cloud:
 #    gateway:
 #      discovery:
