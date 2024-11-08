@@ -37,3 +37,14 @@ Follow the instructions in that repository to run using cloud config server.
 
 * To run multiple applications:
 - on Intellij: add vm options in the edit run configuration and add -Dserver.port=8002
+
+* To test Circuit Breaker run on PowerShell
+- craeted class FooBarController with samples of Retry, CircuitBreaker, RateLimiter and Bulkhead
+- uncomment any of the samples to test each one then run the bellow command to see in the logs how the calls to service are made:
+```while (1) {curl http://localhost:8765/book-service/foo-bar; sleep 0.1}```
+- Retry: it will call the request if error returns a fallback function
+- CircuitBreaker: it will call requests, and we can see some call are made and some is not
+- RateLimiter: give a limit of calls per second to the method
+- Bulkhead: configure max concurrency calls
+
+
