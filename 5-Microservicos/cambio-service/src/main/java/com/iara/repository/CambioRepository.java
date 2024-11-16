@@ -1,6 +1,6 @@
-package com.iara.cambioservice.repository;
+package com.iara.repository;
 
-import com.iara.cambioservice.model.Cambio;
+import com.iara.model.Cambio;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CambioRepository extends JpaRepository<Cambio, Long> {

@@ -1,4 +1,4 @@
-package com.iara.bookservice.model;
+package com.iara.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

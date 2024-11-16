@@ -1,6 +1,6 @@
-package com.iara.bookservice.repository;
+package com.iara.repository;
 
-import com.iara.bookservice.model.Book;
+import com.iara.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<Book, Long> {

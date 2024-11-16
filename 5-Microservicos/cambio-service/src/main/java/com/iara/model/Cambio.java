@@ -1,4 +1,4 @@
-package com.iara.cambioservice.model;
+package com.iara.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

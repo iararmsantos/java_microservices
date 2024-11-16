@@ -48,6 +48,7 @@
         <option value="$PROJECT_DIR$/3-SpringPerson/com.iara/pom.xml" />
         <option value="$PROJECT_DIR$/2-SpringCalculator/com.iara.foo/pom.xml" />
         <option value="$PROJECT_DIR$/1-SpringGreetings/pom.xml" />
+        <option value="$PROJECT_DIR$/6-Docker/pom.xml" />
       </list>
     </option>
   </component>

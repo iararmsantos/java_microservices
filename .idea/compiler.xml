@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="naming-server (5) (br.com.erudio)" />
+        <module name="iara (2)" />
         <module name="book-service (6) (br.com.erudio)" />
         <module name="foo" />
         <module name="book-service (1) (br.com.erudio)" />
@@ -28,6 +29,7 @@
         <module name="api-gateway (5) (br.com.erudio)" />
         <module name="book-service (4) (br.com.erudio)" />
         <module name="cambio-service (5) (br.com.erudio)" />
+        <module name="iara (1)" />
         <module name="book-service" />
         <module name="foo (2) (br.com.erudio)" />
         <module name="foo (3) (br.com.erudio)" />
@@ -91,6 +93,8 @@
       <module name="greeting-service" options="-parameters" />
       <module name="greeting-service (1) (com.iara)" options="-parameters" />
       <module name="hello-docker" options="-parameters" />
+      <module name="iara (1)" options="-parameters" />
+      <module name="iara (2)" options="-parameters" />
       <module name="naming-server" options="-parameters" />
       <module name="naming-server (1) (br.com.erudio)" options="-parameters" />
       <module name="naming-server (2) (br.com.erudio)" options="-parameters" />

@@ -1,4 +1,4 @@
-package com.iara.bookservice.response;
+package com.iara.response;
 
 import java.io.Serializable;
 import lombok.AllArgsConstructor;

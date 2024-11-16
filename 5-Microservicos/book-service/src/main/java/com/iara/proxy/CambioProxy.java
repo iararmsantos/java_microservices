@@ -1,6 +1,6 @@
-package com.iara.bookservice.proxy;
+package com.iara.proxy;
 
-import com.iara.bookservice.response.Cambio;
+import com.iara.response.Cambio;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
