@@ -112,3 +112,8 @@ Follow the instructions in that repository to run using cloud config server.
   ```docker run -p 80:80 -m 512m --cpu-quota 5000 -d  IMAGE_NAME:TAG```
 - info about system:
 ```docker system df```
+
+#### Docker Compose
+- to create image and run services: 
+```docker - compose up```
+- 
