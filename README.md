@@ -115,5 +115,14 @@ Follow the instructions in that repository to run using cloud config server.
 
 #### Docker Compose
 - to create image and run services: 
-```docker - compose up```
-- 
+```docker - compose up -d```
+- to see details of the container: 
+```docker ps```
+- to stop the container: 
+```docker stop {Container Id}```
+- to stop and remove all containers (in docker compose folder): 
+```docker compose down```
+- to access docker logs: 
+```docker logs {container id}```
+- show commands related to docker compose we ran (in docker compose folder): 
+```docker compose ps```
