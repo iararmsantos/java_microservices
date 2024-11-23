@@ -1,29 +1,27 @@
 server:
   port: 8765
 eureka:
-  instance:
-    hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://naming-server:8761/eureka
 spring:
   application:
     name: api-gateway
-# routes configured in ApiGatewayConfig
+  # routes configured in ApiGatewayConfig
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
       routes:
-      - id: cambio-service
-        uri: lb://cambio-service
-        predicates:
-        - Path=/cambio-service/**
-      - id: book-service
-        uri: lb://book-service
-        predicates:
-          - Path=/book-service/**
+        - id: cambio-service
+          uri: lb://cambio-service
+          predicates:
+            - Path=/cambio-service/**
+        - id: book-service
+          uri: lb://book-service
+          predicates:
+            - Path=/book-service/**
 springdoc:
   enable-native-support: true
   api-docs:
@@ -46,4 +44,4 @@ management:
       probability: 1.0
 zipkin:
   tracing:
-    endpoint: http://localhost:9411/api/v2/spans
+    endpoint: http://zipkin-server:9411/api/v2/spans

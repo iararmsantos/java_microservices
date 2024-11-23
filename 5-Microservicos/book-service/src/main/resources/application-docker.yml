@@ -1,11 +1,9 @@
 server:
   port: 8100
 eureka:
-  instance:
-    hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://naming-server:8761/eureka
 resilience4j:
   bulkhead:
     instances:
@@ -21,7 +19,7 @@ resilience4j:
       foo-bar:
         max-attempts: 5
         wait-duration: 1s
-#        increase wait 1s, 3s, 5s...
+        #        increase wait 1s, 3s, 5s...
         enable-exponential-backoff: true
       default:
         max-attempts: 3
@@ -30,9 +28,9 @@ spring:
     name: book-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://book-db:3310/book_service?useTimezone=true&serverTimezone=UTC
     username: root
-    password:
+    password: admin123
   jackson:
     default-property-inclusion: NON_NULL
     serialization:
@@ -43,9 +41,9 @@ spring:
     show-sql: true
 
   flyway:
-    url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://book-db:3310/book_service?useTimezone=true&serverTimezone=UTC
     user: root
-    password:
+    password: admin123
 
 management:
   tracing:
@@ -53,7 +51,7 @@ management:
       probability: 1.0
 zipkin:
   tracing:
-    endpoint: http://localhost:9411/api/v2/spans
+    endpoint: http://zipkin-server:9411/api/v2/spans
 #configuration for swagger and apigateway
 springdoc:
   show-actuator: true

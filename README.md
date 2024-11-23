@@ -90,6 +90,8 @@ Follow the instructions in that repository to run using cloud config server.
   ```docker image inspect {ID}```
 - remove image (append -f to force): 
 ```docker image remove {ID} or docker rmi {ID}```
+- to remove all images (Power Shell): 
+```docker images -a -q | % { docker image rm $_ -f }```
 - to pause container running: 
 ```docker container pause {ID}```
 - to resume: 
@@ -98,6 +100,8 @@ Follow the instructions in that repository to run using cloud config server.
 ```docker container inspect {ID}```
 - delete containers that is not running: 
 ```docker container prune```
+- to delete all containers and volumes: 
+```docker rm -vf $(docker ps -aq)```
 - interrupt container: 
 ```docker container kill {ID}```
 - to create a container that will always restart when stopped: 
@@ -115,7 +119,7 @@ Follow the instructions in that repository to run using cloud config server.
 
 #### Docker Compose
 - to create image and run services: 
-```docker - compose up -d```
+```docker-compose up -d```
 - to see details of the container: 
 ```docker ps```
 - to stop the container: 
@@ -126,3 +130,23 @@ Follow the instructions in that repository to run using cloud config server.
 ```docker logs {container id}```
 - show commands related to docker compose we ran (in docker compose folder): 
 ```docker compose ps```
+
+### Distributed Log tracing with Zipkin, Sleuth, and RabbitMQ
+- run docker command to start zipkin:
+```docker run -d -p 9411:9411 openzipkin/zipkin```
+- start all services and run query to get book. 
+Then go to http://localhost:9411/zipkin and click on Run Query, there you can see the logs
+
+### Dockerizando services
+- to build service image, add plugin to maven (api-gateway sample),
+go to service folder and run:
+```mvn spring-boot:build-image -DskipTests```
+- to run naming service without dockerfile:
+```docker run -p 8761:8761 iararmsantos/naming-server:0.0.1-SNAPSHOT```
+- in service with Dockerfile (cambio and book) run in the service root folder:
+- To create the JAR file: 
+```mvn clean package -DskipTests```
+- Build the docker image:
+```docker build -t iararmsantos/${service-name}:0.0.1-SNAPSHOT .```
+- Run the docker container (in the docker-compose folder):
+```docker-compose up -d```

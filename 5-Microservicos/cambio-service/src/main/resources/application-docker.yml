@@ -1,17 +1,15 @@
 server:
   port: 8000
 eureka:
-  instance:
-    hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://naming-server:8761/eureka
 spring:
   application:
     name: cambio-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cambio_service?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://cambio-db:3308/cambio_service?useTimezone=true&serverTimezone=UTC
     username: root
     password:
   jpa:
@@ -20,7 +18,7 @@ spring:
     show-sql: true
 
   flyway:
-    url: jdbc:mysql://localhost:3306/cambio_service?useTimezone=true&serverTimezone=UTC
+    url: jdbc:mysql://cambio-db:3308/cambio_service?useTimezone=true&serverTimezone=UTC
     user: root
     password:
 management:
@@ -29,7 +27,7 @@ management:
       probability: 1.0
 zipkin:
   tracing:
-    endpoint: http://localhost:9411/api/v2/spans
+    endpoint: http://zipkin-server:9411/api/v2/spans
 #configuration for swagger and apigateway
 springdoc:
   show-actuator: false

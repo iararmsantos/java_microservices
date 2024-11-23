@@ -40,4 +40,9 @@ public class CambioController {
 
         return cambio;
     }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello, World!";
+    }
 }
