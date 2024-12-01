@@ -73,17 +73,36 @@
 			<version>2.5.0</version>
 		</dependency>
 <!--ZIPKIN, SLEUTH, RABITMQ-->
+		<!-- Micrometer Tracing Integration -->
 		<dependency>
 			<groupId>io.micrometer</groupId>
-			<artifactId>micrometer-tracing-bridge-otel</artifactId>
+			<artifactId>micrometer-tracing-bridge-brave</artifactId>
 		</dependency>
+
+		<!-- Micrometer Observation for Tests -->
 		<dependency>
-			<groupId>io.opentelemetry</groupId>
-			<artifactId>opentelemetry-exporter-zipkin</artifactId>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-observation-test</artifactId>
+			<scope>test</scope>
 		</dependency>
+
+		<!-- Zipkin Reporter (Brave Integration) -->
+		<dependency>
+			<groupId>io.zipkin.reporter2</groupId>
+			<artifactId>zipkin-reporter-brave</artifactId>
+		</dependency>
+
+		<!-- RabbitMQ Integration -->
 		<dependency>
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit</artifactId>
+		</dependency>
+
+		<!-- Zipkin RabbitMQ Collector -->
+		<dependency>
+			<groupId>io.zipkin.zipkin2</groupId>
+			<artifactId>zipkin-collector-rabbitmq</artifactId>
+			<version>3.4.2</version>
 		</dependency>
 
 		<dependency>

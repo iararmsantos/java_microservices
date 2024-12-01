@@ -138,10 +138,12 @@ Follow the instructions in that repository to run using cloud config server.
 Then go to http://localhost:9411/zipkin and click on Run Query, there you can see the logs
 
 ### Dockerizando services
-- to build service image, add plugin to maven (api-gateway sample),
-go to service folder and run:
+- to build service image, add plugin to maven (api-gateway, naming-server):
+- create the JAR file:
+```mvn clean package -DskipTests```
+- go to service folder and run:
 ```mvn spring-boot:build-image -DskipTests```
-- to run naming service without dockerfile:
+- to run api-gateway/naming-server without dockerfile:
 ```docker run -p 8761:8761 iararmsantos/naming-server:0.0.1-SNAPSHOT```
 - in service with Dockerfile (cambio and book) run in the service root folder:
 - To create the JAR file: 

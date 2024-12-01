@@ -4,6 +4,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://naming-server:8761/eureka
+
 spring:
   application:
     name: cambio-service
@@ -11,7 +12,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://cambio-db:3308/cambio_service?useTimezone=true&serverTimezone=UTC
     username: root
-    password:
+    password: admin123
+  jackson:
+    default-property-inclusion: NON_NULL
+    serialization:
+      fail-on-empty-beans: false
   jpa:
     hibernate:
       ddl-auto: update
@@ -20,16 +25,19 @@ spring:
   flyway:
     url: jdbc:mysql://cambio-db:3308/cambio_service?useTimezone=true&serverTimezone=UTC
     user: root
-    password:
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-zipkin:
-  tracing:
-    endpoint: http://zipkin-server:9411/api/v2/spans
+    password: admin123
+
+  # Zipkin
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+    zipkin:
+      base-url: http://zipkin-server:9411/
+
+
 #configuration for swagger and apigateway
 springdoc:
-  show-actuator: false
+  show-actuator: true
   api-docs:
     path: /cambio-service/v3/api-docs

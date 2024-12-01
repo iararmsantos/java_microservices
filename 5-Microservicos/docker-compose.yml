@@ -1,6 +1,23 @@
-version: '3.4'
-
 services:
+  rabbit-mq:
+    image: rabbitmq:3.8.14-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    restart: always
+    environment:
+      RABBITMQ_LOGS: "-"
+      RABBITMQ_LOGS_LEVEL: debug
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: [ "CMD-SHELL", "rabbitmq-diagnostics ping" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iara-network
+
   zipkin-server:
     image: openzipkin/zipkin:2.23.2
     ports:
@@ -9,17 +26,11 @@ services:
     depends_on:
       - rabbit-mq
     environment:
+      DEBUG: true
+      JAVA_OPTS: "-Dlogging.level.root=DEBUG -Dlogging.level.zipkin=DEBUG"
       RABBIT_URI: amqp://guest:guest@rabbit-mq:5672
     networks:
-      - erudio-network
-
-  rabbit-mq:
-    image: rabbitmq:3.8.14-management
-    ports:
-      - 5672:5672
-      - 15672:15672
-    networks:
-      - erudio-network
+      - iara-network
 
   cambio-db:
     image: mysql:8.0
@@ -38,7 +49,7 @@ services:
     expose:
       - 3308
     networks:
-      - erudio-network
+      - iara-network
 
   book-db:
     image: mysql:8.0
@@ -57,19 +68,21 @@ services:
     expose:
       - 3310
     networks:
-      - erudio-network
+      - iara-network
 
   naming-server:
     image: iararmsantos/naming-server:0.0.1-SNAPSHOT
     ports:
       - 8761:8761
+    restart: always
     networks:
-      - erudio-network
+      - iara-network
 
   api-gateway:
     image: iararmsantos/api-gateway:0.0.1-SNAPSHOT
     ports:
       - 8765:8765
+    restart: always
     depends_on:
       - naming-server
       - rabbit-mq
@@ -80,14 +93,14 @@ services:
       SPRING_RABBITMQ_HOST: rabbit-mq
       SPRING_ZIPKIN_SENDER_TYPE: rabbit
     networks:
-      - erudio-network
+      - iara-network
 
   cambio-service:
     image: iararmsantos/cambio-service:0.0.1-SNAPSHOT
     restart: always
     build:
       context: .
-      dockerfile: 10-cambio-service/Dockerfile
+      dockerfile: cambio-service/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
@@ -108,14 +121,14 @@ services:
       - cambio-db
       - rabbit-mq
     networks:
-      - erudio-network
+      - iara-network
 
   book-service:
     image: iararmsantos/book-service:0.0.1-SNAPSHOT
     restart: always
     build:
       context: .
-      dockerfile: 10-book-service/Dockerfile
+      dockerfile: book-service/Dockerfile
     environment:
       TZ: America/Sao_Paulo
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
@@ -136,7 +149,7 @@ services:
       - book-db
       - rabbit-mq
     networks:
-      - erudio-network
+      - iara-network
 networks:
-  erudio-network:
+  iara-network:
     driver: bridge

@@ -22,6 +22,15 @@ spring:
           uri: lb://book-service
           predicates:
             - Path=/book-service/**
+
+  # Zipkin
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+    zipkin:
+      base-url: http://zipkin-server:9411/
+
 springdoc:
   enable-native-support: true
   api-docs:
@@ -37,11 +46,3 @@ springdoc:
       - url: /cambio-service/v3/api-docs
         name: Cambio Service
         primaryName: Cambio Service
-# Zipkin
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-zipkin:
-  tracing:
-    endpoint: http://zipkin-server:9411/api/v2/spans

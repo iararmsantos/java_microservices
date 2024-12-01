@@ -45,13 +45,15 @@ spring:
     user: root
     password: admin123
 
-management:
-  tracing:
-    sampling:
-      probability: 1.0
-zipkin:
-  tracing:
-    endpoint: http://zipkin-server:9411/api/v2/spans
+  # Zipkin
+  management:
+    tracing:
+      sampling:
+        probability: 1.0
+    zipkin:
+      base-url: http://zipkin-server:9411/
+
+
 #configuration for swagger and apigateway
 springdoc:
   show-actuator: true

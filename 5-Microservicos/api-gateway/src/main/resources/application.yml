@@ -39,11 +39,26 @@ springdoc:
       - url: /cambio-service/v3/api-docs
         name: Cambio Service
         primaryName: Cambio Service
-# Zipkin
+
 management:
   tracing:
+    enabled: true
     sampling:
       probability: 1.0
-zipkin:
-  tracing:
-    endpoint: http://localhost:9411/api/v2/spans
+
+  zipkin:
+    base-url: http://localhost:9411
+    # Enable Zipkin to collect and forward to RabbitMQ
+    collector:
+      rabbitmq:
+        enabled: true
+        uri: amqp://guest:guest@localhost:5672  # Adjust this URI if needed
+        queue: zipkin
+        exchange: zipkin
+        # Optional configuration: configure message TTL, prefetch, etc.
+        message-ttl: 60000
+        prefetch-count: 100
+  metrics:
+    export:
+      simple:
+        enabled: true
