@@ -137,6 +137,14 @@ Follow the instructions in that repository to run using cloud config server.
 - start all services and run query to get book. 
 Then go to http://localhost:9411/zipkin and click on Run Query, there you can see the logs
 
+#### To run services locally and zipkin and rabbit in the container: 
+- get zipkin image:
+```docker pull openzipkin/zipkin```
+- get rabbitmq image: 
+```docker pull rabbitmq```
+- go to folder 5-Microservicos/ZipkinRabbitMQ and run
+```docker compose up -d```
+
 ### Dockerizando services
 - to build service image, add plugin to maven (api-gateway, naming-server):
 - create the JAR file:
@@ -152,3 +160,5 @@ Then go to http://localhost:9411/zipkin and click on Run Query, there you can se
 ```docker build -t iararmsantos/${service-name}:0.0.1-SNAPSHOT .```
 - Run the docker container (in the docker-compose folder):
 ```docker-compose up -d```
+
+
