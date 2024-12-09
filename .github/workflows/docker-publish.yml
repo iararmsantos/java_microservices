@@ -1,0 +1,16 @@
+name: Continuous Integration With Github
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        
+      - name: Login Docker hub
+        uses: docker/login-action@v3.3.0
+        with:            
+          username: ${{DOCKER_USERNAME}}
+          password: ${{DOCKER_PASSWORD}} 
