@@ -147,15 +147,15 @@ Then go to http://localhost:9411/zipkin and click on Run Query, there you can se
 
 ### Dockerizando services
 - to build service image, add plugin to maven (api-gateway, naming-server):
-- create the JAR file:
-```mvn clean package -DskipTests```
+- To create the JAR file:
+  ```mvn clean package -DskipTests```
+- or
+  ```mvn clean install -DskipTests -U```
 - go to service folder and run:
 ```mvn spring-boot:build-image -DskipTests```
 - to run api-gateway/naming-server without dockerfile:
 ```docker run -p 8761:8761 iararmsantos/naming-server:0.0.1-SNAPSHOT```
 - in service with Dockerfile (cambio and book) run in the service root folder:
-- To create the JAR file: 
-```mvn clean package -DskipTests```
 - Build the docker image:
 ```docker build -t iararmsantos/${service-name}:0.0.1-SNAPSHOT .```
 - Run the docker container (in the docker-compose folder):

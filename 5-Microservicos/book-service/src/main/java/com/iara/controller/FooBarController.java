@@ -18,7 +18,7 @@ public class FooBarController {
 
     @Operation(summary = "Foo bar")
     @GetMapping("/foo-bar")
-    //Retry, CircuitBreaker, RateLimiter, and Bulkhead are configured in application.yml
+    //Retry, CircuitBreaker, RateLimiter, and Bulkhead are configured in application-docker.yml
 //    @Retry(name = "foo-bar", fallbackMethod = "fallbackMethod") //commented retry to use circuit breaker
 //    @CircuitBreaker(name = "default", fallbackMethod = "fallbackMethod") //commented to test rate limit and bulkhead
 //    @RateLimiter(name = "default") //commented to test bulkhead (concurrency)

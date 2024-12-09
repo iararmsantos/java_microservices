@@ -21,7 +21,7 @@ resilience4j:
       foo-bar:
         max-attempts: 5
         wait-duration: 1s
-#        increase wait 1s, 3s, 5s...
+        #        increase wait 1s, 3s, 5s...
         enable-exponential-backoff: true
       default:
         max-attempts: 3
@@ -32,7 +32,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
     username: root
-    password:
+    password: admin123
   jackson:
     default-property-inclusion: NON_NULL
     serialization:
@@ -44,8 +44,14 @@ spring:
 
   flyway:
     url: jdbc:mysql://localhost:3306/book_service?useTimezone=true&serverTimezone=UTC
+    schemas: book_service
     user: root
-    password:
+    password: admin123
+    locations: classpath:db/migration
+
+logging:
+  level:
+    org.flywaydb: DEBUG
 
 management:
   tracing:
@@ -56,19 +62,14 @@ management:
   zipkin:
     base-url: http://localhost:9411
     # Enable Zipkin to collect and forward to RabbitMQ
-    collector:
-      rabbitmq:
-        enabled: true
-        uri: amqp://guest:guest@localhost:5672  # Adjust this URI if needed
-        queue: zipkin
-        exchange: zipkin
-        # Optional configuration: configure message TTL, prefetch, etc.
-        message-ttl: 60000
-        prefetch-count: 100
-  metrics:
-    export:
-      simple:
-        enabled: true
+    sender:
+      type: rabbit
+    rabbitmq:
+      addresses: localhost:5672
+      username: guest
+      password: guest
+      virtual-host: /
+
 #configuration for swagger and apigateway
 springdoc:
   show-actuator: true

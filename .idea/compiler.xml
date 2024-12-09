@@ -31,9 +31,11 @@
         <module name="cambio-service (5) (br.com.erudio)" />
         <module name="iara (1)" />
         <module name="book-service" />
+        <module name="api-gateway (1)" />
         <module name="foo (2) (br.com.erudio)" />
         <module name="foo (3) (br.com.erudio)" />
         <module name="erudio-config-server (1)" />
+        <module name="book-service (1)" />
         <module name="cambio-service (4) (br.com.erudio)" />
         <module name="api-gateway (4) (br.com.erudio)" />
         <module name="naming-server (3) (br.com.erudio)" />
@@ -46,7 +48,9 @@
         <module name="com.iara" />
         <module name="foo (1)" />
         <module name="api-gateway" />
+        <module name="cambio-service (1)" />
         <module name="naming-server (2) (br.com.erudio)" />
+        <module name="naming-server (1)" />
         <module name="api-gateway (1) (br.com.erudio)" />
         <module name="naming-server" />
         <module name="cambio-service" />
@@ -58,8 +62,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway (1)" options="-parameters" />
       <module name="book-service" options="-parameters" />
+      <module name="book-service (1)" options="-parameters" />
       <module name="cambio-service" options="-parameters" />
+      <module name="cambio-service (1)" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="foo" options="-parameters" />
       <module name="greeting-service" options="-parameters" />
@@ -67,6 +74,7 @@
       <module name="iara (1)" options="-parameters" />
       <module name="iara (2)" options="-parameters" />
       <module name="naming-server" options="-parameters" />
+      <module name="naming-server (1)" options="-parameters" />
     </option>
   </component>
 </project>

@@ -23,13 +23,21 @@ spring:
           predicates:
             - Path=/book-service/**
 
-  # Zipkin
-  management:
-    tracing:
-      sampling:
-        probability: 1.0
-    zipkin:
-      base-url: http://zipkin-server:9411/
+# Zipkin
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    base-url: http://zipkin-server:9411/
+    endpoint: http://zipkin-server:9411/api/v2/spans
+    sender:
+      type: rabbit
+    rabbitmq:
+      addresses: rabbit-mq:5672
+      username: guest
+      password: guest
+      virtual-host: /
 
 springdoc:
   enable-native-support: true

@@ -49,16 +49,10 @@ management:
   zipkin:
     base-url: http://localhost:9411
     # Enable Zipkin to collect and forward to RabbitMQ
-    collector:
-      rabbitmq:
-        enabled: true
-        uri: amqp://guest:guest@localhost:5672  # Adjust this URI if needed
-        queue: zipkin
-        exchange: zipkin
-        # Optional configuration: configure message TTL, prefetch, etc.
-        message-ttl: 60000
-        prefetch-count: 100
-  metrics:
-    export:
-      simple:
-        enabled: true
+    sender:
+      type: rabbit
+    rabbitmq:
+      addresses: localhost:5672
+      username: guest
+      password: guest
+      virtual-host: /

@@ -49,6 +49,10 @@
         <option value="$PROJECT_DIR$/2-SpringCalculator/com.iara.foo/pom.xml" />
         <option value="$PROJECT_DIR$/1-SpringGreetings/pom.xml" />
         <option value="$PROJECT_DIR$/6-Docker/pom.xml" />
+        <option value="$PROJECT_DIR$/7-Microservicos-Docker/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/7-Microservicos-Docker/book-service/pom.xml" />
+        <option value="$PROJECT_DIR$/7-Microservicos-Docker/cambio-service/pom.xml" />
+        <option value="$PROJECT_DIR$/7-Microservicos-Docker/naming-server/pom.xml" />
       </list>
     </option>
   </component>
