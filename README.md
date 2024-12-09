@@ -1,3 +1,5 @@
+[![Continuous Integration With Github](https://github.com/iararmsantos/java_microservices/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/iararmsantos/java_microservices/actions/workflows/docker-publish.yml)
+
 Microservices are essential today for agile and scalable development, enabling developers worldwide to deliver software with greater speed and efficiency. This course empowers developers to build microservices in Java using Spring Boot and Spring Cloud, covering both theoretical fundamentals (10%) and intensive practice (90%).
 
 In this course, I learned how to create microservices with Spring Boot 2.5 and Java 16, beginning with an introduction to the basic concepts, implementing a simple microservice, and progressing to a complex, integrated stack. With each module, I expanded my knowledge of essential tools and technologies in the microservices ecosystem, including:
