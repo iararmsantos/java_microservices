@@ -22,5 +22,5 @@ jobs:
           distribution: 'adopt'
 
       - name: Build Eurake Naming Server Container Image
-        working-directory: ./\7-Microservicos-Docker\naming-server
+        working-directory: ./7-Microservicos-Docker/naming-server
         run: mvn spring-boot:build-image -DskipTests
