@@ -37,6 +37,11 @@ jobs:
         working-directory: ./7-Microservicos-Docker/book-service
         run: mvn clean package -DskipTests
 
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
+          
       - name: Docker Compose Build
-        working-directory: ./7-Microservicos-Docker/
+        working-directory: ./7-Microservicos-Docker
         run: docker-compose build
