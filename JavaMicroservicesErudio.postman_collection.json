@@ -1,0 +1,633 @@
+{
+	"info": {
+		"_postman_id": "77254aa2-35b8-4f43-9b2b-6f1b1c3b1631",
+		"name": "JavaMicroservicesErudio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9236394"
+	},
+	"item": [
+		{
+			"name": "1-Greeting",
+			"item": [
+				{
+					"name": "greeting?name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/greeting?name=Iara",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greeting"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Iara"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2-Calculator",
+			"item": [
+				{
+					"name": "sum(numberOne, numberTwo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sum/2/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sum",
+								"2",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subtraction(numberOne, numberTwo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/subtraction/2/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"subtraction",
+								"2",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "multiplication(numberOne, numberTwo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/multiplication/2/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"multiplication",
+								"2",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "division(numberOne, numberTwo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/division/6/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"division",
+								"6",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "average(numberOne, numberTwo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/average/6/6,2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"average",
+								"6",
+								"6,2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sqrt(numberOne)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sqrt/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sqrt",
+								"25"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3-SpringPerson",
+			"item": [
+				{
+					"name": "getPersonById(id)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePerson(id)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll()",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPerson(person)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Pietro\",\r\n    \"lastName\": \"Brito\",\r\n    \"address\": \"Av. Celestino, 123\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePerson(person)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"firstName\": \"Pedro\",\r\n    \"lastName\": \"Mariano\",\r\n    \"address\": \"Av. Artur Nogueira, 123\",\r\n    \"gender\": \"male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/person",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4-GreetingMicroservices",
+			"item": [
+				{
+					"name": "greeting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/greeting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"greeting"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Iara Santos",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5-ConectandoMicroservices",
+			"item": [
+				{
+					"name": "cambio-service",
+					"item": [
+						{
+							"name": "getCambio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cambio-service}}/cambio-service/5/USD/BRL",
+									"host": [
+										"{{cambio-service}}"
+									],
+									"path": [
+										"cambio-service",
+										"5",
+										"USD",
+										"BRL"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "hello",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cambio-service}}/cambio-service/hello",
+									"host": [
+										"{{cambio-service}}"
+									],
+									"path": [
+										"cambio-service",
+										"hello"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rabbitmq",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cambio-service}}/cambio-service/rabbitmq",
+									"host": [
+										"{{cambio-service}}"
+									],
+									"path": [
+										"cambio-service",
+										"rabbitmq"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "testTrace",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cambio-service}}/cambio-service/rabbitmq/test-trace",
+									"host": [
+										"{{cambio-service}}"
+									],
+									"path": [
+										"cambio-service",
+										"rabbitmq",
+										"test-trace"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "book-service",
+					"item": [
+						{
+							"name": "findBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{book-service}}/book-service/5/BRL",
+									"host": [
+										"{{book-service}}"
+									],
+									"path": [
+										"book-service",
+										"5",
+										"BRL"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "foo-bar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{book-service}}/book-service/foo-bar",
+									"host": [
+										"{{book-service}}"
+									],
+									"path": [
+										"book-service",
+										"foo-bar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createBook",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"author\": \"Jane Austen\",\r\n    \"price\": 19.75,\r\n    \"title\": \"Pride and Prejudice\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{book-service}}/book-service",
+									"host": [
+										"{{book-service}}"
+									],
+									"path": [
+										"book-service"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "api-gateway",
+					"item": [
+						{
+							"name": "getBook",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/book-service/7/BRL",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"book-service",
+										"7",
+										"BRL"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCambio",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/cambio-service/15/USD/CLP",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"cambio-service",
+										"15",
+										"USD",
+										"CLP"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "foo-bar",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/book-service/foo-bar",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"book-service",
+										"foo-bar"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "hello Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api-gateway}}/cambio-service/hello",
+									"host": [
+										"{{api-gateway}}"
+									],
+									"path": [
+										"cambio-service",
+										"hello"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "8-ChatGPT",
+			"item": [
+				{
+					"name": "https://api.openai.com/v1/chat/completions",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{OPENAI_API_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"model\": \"gpt-4o-mini\",\r\n  \"messages\": [\r\n    {\r\n        \"role\": \"user\",\r\n        \"content\": \"What is the name of the brazilian emperors?\"\r\n    }\r\n  ], \r\n  \"temperature\": 1,\r\n  \"max_completion_tokens\": 2048,\r\n  \"top_p\": 1,\r\n  \"frequency_penalty\": 0,\r\n  \"presence_penalty\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.openai.com/v1/chat/completions",
+							"protocol": "https",
+							"host": [
+								"api",
+								"openai",
+								"com"
+							],
+							"path": [
+								"v1",
+								"chat",
+								"completions"
+							]
+						},
+						"description": "Generated from cURL: curl https://api.openai.com/v1/chat/completions \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -H \"Authorization: Bearer $OPENAI_API_KEY\" \\\r\n  -d '{\r\n  \"model\": \"gpt-4o-mini\",\r\n  \"messages\": [],\r\n  \"response_format\": {\r\n    \"type\": \"text\"\r\n  },\r\n  \"temperature\": 1,\r\n  \"max_completion_tokens\": 2048,\r\n  \"top_p\": 1,\r\n  \"frequency_penalty\": 0,\r\n  \"presence_penalty\": 0\r\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bot/chat?prompt=What is the name of the brazilian emperors ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bot",
+								"chat"
+							],
+							"query": [
+								{
+									"key": "prompt",
+									"value": "What is the name of the brazilian emperors "
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "OPENAI_API_KEY",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

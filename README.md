@@ -163,4 +163,7 @@ Then go to http://localhost:9411/zipkin and click on Run Query, there you can se
 - Run the docker container (in the docker-compose folder):
 ```docker-compose up -d```
 
-
+### ChatGpt microservice
+- to run this you will need to create an api key [here](https://platform.openai.com/settings/organization/api-keys)
+- then replace the api key in the application.yml
+- start application and run the postman collection (JavaMicroservicesErudio.postman_collection) for this course 
